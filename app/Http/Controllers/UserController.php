@@ -8,6 +8,14 @@ use Illuminate\Support\Facades\Redirect;
 
 class UserController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('onlyadmin');
+    }
+
+
     /**
      * Display a listing of the resource.
      *

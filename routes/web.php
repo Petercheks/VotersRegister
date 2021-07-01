@@ -16,14 +16,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])
+Route::get('/', [HomeController::class, 'index'])
     ->name('home');
+
+Route::get('/user_register', [HomeController::class, 'getUser'])
+    ->name('user_register');
 
 Route::resource('/users', UserController::class);
 
@@ -31,7 +34,3 @@ Route::get('/react', function () {
     return view('react');
 });
 
-
-Route::get('/token', function(){
-    return view('layouts.app');
-});
