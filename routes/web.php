@@ -31,7 +31,12 @@ Route::get('/react', function () {
     return view('react');
 });
 
+Route::get('/login_react', function() {
+	return view('auth.example_login_react');
+});
+
 
 Route::get('/token', function(){
     return view('layouts.app');
 });
+
