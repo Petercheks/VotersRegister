@@ -1,4 +1,4 @@
-import Login from './components/Login'
+import Dashboard from './components/Dashboard'
 import ReactDOM from 'react-dom'
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -18,12 +18,12 @@ require('./components/Example');
 
 const App = () => {
 	return (
-		<Login />
+		<Dashboard />
 	)
 }
 
-if (document.getElementById('login')) {
-	ReactDOM.render(<App />, document.getElementById('login'));
+if (document.getElementById('dashboard')) {
+	ReactDOM.render(<App />, document.getElementById('dashboard'));
 }
 
 
